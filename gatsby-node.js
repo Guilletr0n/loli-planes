@@ -19,7 +19,6 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               id
               slug
-              title
             }
           }
         }
@@ -32,7 +31,7 @@ exports.createPages = ({ graphql, actions }) => {
       }
 
       // Resolve the paths to our template
-      const sitePostTemplate = path.resolve("./src/pages/siteposts.js")
+      const sitePostTemplate = path.resolve("./src/templates/article.js")
 
       // Then for each result we can create a page
       result.data.allContentfulBlogPost.edges.forEach(edge => {

@@ -10,8 +10,6 @@ const IndexPage = () => (
   <Layout>
     <SEO title='Home' keywords={[`gatsby`, `application`, `react`]} />
     <div className='home'>
-      <h1>Hello Ishan</h1>
-      <p>Welcome your awesome Blog</p>
       <div>
         <div
           style={{
@@ -22,7 +20,7 @@ const IndexPage = () => (
           <Image />
         </div>
       </div>
-      <Link to='/siteposts/'>View all posts</Link>
+      <Link to='/siteposts/'>Ver todos los artículos</Link>
     </div>
   </Layout>
 );

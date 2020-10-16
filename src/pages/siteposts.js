@@ -7,14 +7,12 @@ import SEO from "../components/seo"
 
 const SitePosts = ({ data }) => {
   const ourPosts = data.allContentfulBlogPost.edges
-  console.log('our posts:',ourPosts);
   return (
     <Layout>
       <SEO title="Our Posts" />
-      <h1>{"Welcome to our Blog"}</h1>
+      <h1>{"Lista de todos los articulos"}</h1>
       <div>
-        <p>Articulos:</p>
-        <p>{node.slug}</p>
+        <p>{node.title}</p>
         {ourPosts.map(({ node: post }) => (
           <div key={post.id}>
             <Link to={`/siteposts/${post.slug}`}>
@@ -23,7 +21,7 @@ const SitePosts = ({ data }) => {
           </div>
         ))}
         <span />
-        <Link to="/">Back to the homepage</Link>
+        <Link to="/">Volver a la pagina de inicio</Link>
       </div>
     </Layout>
   )
